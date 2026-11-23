@@ -1,0 +1,16 @@
+# Source of truth for your DSA progress. Edited by scripts/dsa.py (and by hand if you must).
+# Dates are YYYY-MM-DD strings. The README dashboard is generated from this file.
+meta:
+  schema: 1
+  created: '2026-11-22'
+  path: syllabus
+state: {}
+topics: {}
+patterns: {}
+weak_areas: []
+reviews: []
+homework: []
+mistakes: []
+deviations: []
+problems: {}
+history: []

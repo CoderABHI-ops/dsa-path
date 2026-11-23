@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal DSA learning progress tracker and FAANG interview study dashboard.">
+  <title>DSA Progress Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="dashboard-container">
+    <div id="loading-state" class="state-card state-loading" role="status" aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Loading DSA progress data...</p>
+    </div>
+    <div id="error-state" class="state-card state-error" role="alert" style="display: none;">
+      <h2>Unable to Load Dashboard Data</h2>
+      <p id="error-message">Could not fetch <code>progress.json</code>.</p>
+      <div class="error-guidance">
+        <p><strong>Troubleshooting:</strong></p>
+        <ul>
+          <li>If viewing via <code>file://</code>, browsers block local <code>fetch()</code> requests. Run a static local server:
+            <pre><code>python -m http.server 8000 -d docs</code></pre>
+            and browse to <a href="http://localhost:8000" target="_blank" rel="noopener">http://localhost:8000</a>.
+          </li>
+          <li>Ensure <code>docs/progress.json</code> exists by running:
+            <pre><code>python scripts/dsa.py dashboard</code></pre>
+          </li>
+        </ul>
+      </div>
+      <button id="retry-button" class="btn btn-secondary">Retry</button>
+    </div>
+    <main id="dashboard-content" style="display: none;"></main>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>

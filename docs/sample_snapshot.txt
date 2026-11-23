@@ -1,0 +1,35 @@
+Here is your updated snapshot:
+
+```dsa-snapshot
+SESSION_STATE:
+  last_updated: "2026-11-23"
+  path: "syllabus"
+  modules_completed: [1]
+  module_number: 2
+  module_name: "Arrays, Strings & Core Array Patterns"
+  current_topic: "Sliding Window"
+  topic_status: "IN_PROGRESS (Stage 3)"
+  topics_completed_in_module:
+    - "Arrays"
+    - "Two Pointers"
+  topics_pending_in_module:
+    - "Prefix Sum & Difference Arrays"
+  pattern_mastery:
+    - pattern: "Two Pointers"
+      questions_solved: 4
+      confidence: "High"
+  weak_areas_to_reinforce:
+    - "Shrink condition off-by-one in variable windows"
+  homework_assigned:
+    - "LC 3: Longest Substring Without Repeating Characters (Med)"
+  reviews_due:
+    - topic: "Two Pointers"
+      due: "2026-11-24"
+      type: "24h quick recap"
+    - topic: "Two Pointers"
+      due: "2026-11-30"
+      type: "7d mixed challenge"
+  mistakes_log:
+    - "LC 3: forgot to remove s[left] from the set before shrinking"
+  deviations: []
+```

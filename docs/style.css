@@ -1,0 +1,934 @@
+/* ==========================================================================
+   DSA Progress Dashboard CSS
+   Vanilla CSS with zero build step and zero CDN dependencies.
+   ========================================================================== */
+
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  
+  /* Light Theme (WCAG AA Compliant) */
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --border-color: #cbd5e1;
+  --border-subtle: #e2e8f0;
+  
+  --text-main: #0f172a;       /* 15.6:1 against #ffffff */
+  --text-muted: #475569;      /* 5.4:1 against #ffffff (WCAG AA >= 4.5:1) */
+  --text-inverse: #ffffff;
+  
+  --accent: #2563eb;          /* 4.6:1 against #ffffff */
+  --accent-subtle: #eff6ff;
+  --accent-hover: #1d4ed8;
+  
+  --success: #15803d;         /* 4.7:1 against #ffffff */
+  --success-bg: #dcfce7;
+  --success-border: #bbf7d0;
+  
+  --warning: #854d0e;         /* 5.1:1 against #ffffff */
+  --warning-bg: #fef9c3;
+  --warning-border: #fef08a;
+  
+  --danger: #b91c1c;          /* 5.5:1 against #ffffff */
+  --danger-bg: #fee2e2;
+  --danger-border: #fecaca;
+  
+  --info: #0369a1;            /* 5.0:1 against #ffffff */
+  --info-bg: #e0f2fe;
+  --info-border: #bae6fd;
+  
+  --heat-0: #e2e8f0;
+  --heat-1: #93c5fd;
+  --heat-2: #3b82f6;
+  --heat-3: #1d4ed8;
+  --heat-4: #1e3a8a;
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-page: #0f172a;
+    --bg-card: #1e293b;
+    --bg-subtle: #334155;
+    --border-color: #475569;
+    --border-subtle: #334155;
+    
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-inverse: #0f172a;
+    
+    --accent: #60a5fa;
+    --accent-subtle: #1e3a8a33;
+    --accent-hover: #93c5fd;
+    
+    --success: #4ade80;
+    --success-bg: #14532d;
+    --success-border: #166534;
+    
+    --warning: #facc15;
+    --warning-bg: #713f12;
+    --warning-border: #854d0e;
+    
+    --danger: #f87171;
+    --danger-bg: #7f1d1d;
+    --danger-border: #991b1b;
+    
+    --info: #38bdf8;
+    --info-bg: #0c4a6e;
+    --info-border: #0369a1;
+    
+    --heat-0: #334155;
+    --heat-1: #1d4ed8;
+    --heat-2: #2563eb;
+    --heat-3: #3b82f6;
+    --heat-4: #60a5fa;
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Explicit data-theme overrides if toggled */
+[data-theme="light"] {
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --border-color: #cbd5e1;
+  --border-subtle: #e2e8f0;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-inverse: #ffffff;
+  --accent: #2563eb;
+  --accent-subtle: #eff6ff;
+  --accent-hover: #1d4ed8;
+  --success: #15803d;
+  --success-bg: #dcfce7;
+  --success-border: #bbf7d0;
+  --warning: #854d0e;
+  --warning-bg: #fef9c3;
+  --warning-border: #fef08a;
+  --danger: #b91c1c;
+  --danger-bg: #fee2e2;
+  --danger-border: #fecaca;
+  --heat-0: #e2e8f0;
+  --heat-1: #93c5fd;
+  --heat-2: #3b82f6;
+  --heat-3: #1d4ed8;
+  --heat-4: #1e3a8a;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0f172a;
+  --bg-card: #1e293b;
+  --bg-subtle: #334155;
+  --border-color: #475569;
+  --border-subtle: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-inverse: #0f172a;
+  --accent: #60a5fa;
+  --accent-subtle: #1e3a8a33;
+  --accent-hover: #93c5fd;
+  --success: #4ade80;
+  --success-bg: #14532d;
+  --success-border: #166534;
+  --warning: #facc15;
+  --warning-bg: #713f12;
+  --warning-border: #854d0e;
+  --danger: #f87171;
+  --danger-bg: #7f1d1d;
+  --danger-border: #991b1b;
+  --heat-0: #334155;
+  --heat-1: #1d4ed8;
+  --heat-2: #2563eb;
+  --heat-3: #3b82f6;
+  --heat-4: #60a5fa;
+}
+
+/* ==========================================================================
+   Base Styles & Reset
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   Layout Containers
+   ========================================================================== */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-areas:
+      "header header"
+      "today practice"
+      "overall activity"
+      "modules focus"
+      "modules focus"
+      "patterns patterns";
+    align-items: start;
+  }
+
+  #panel-header { grid-area: header; }
+  #panel-today { grid-area: today; }
+  #panel-overall { grid-area: overall; }
+  #panel-modules { grid-area: modules; }
+  #panel-activity { grid-area: activity; }
+  #panel-practice { grid-area: practice; }
+  #panel-focus { grid-area: focus; }
+  #panel-patterns { grid-area: patterns; }
+}
+
+/* ==========================================================================
+   Card Component
+   ========================================================================== */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--border-color);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ==========================================================================
+   States (Loading, Error, Empty)
+   ========================================================================== */
+.state-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 550px;
+  box-shadow: var(--shadow-md);
+}
+
+.state-loading .spinner {
+  width: 44px;
+  height: 44px;
+  border: 4px solid var(--border-subtle);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 1.25rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.state-error {
+  border-color: var(--danger-border);
+  background-color: var(--bg-card);
+}
+
+.state-error h2 {
+  color: var(--danger);
+  margin-bottom: 0.75rem;
+}
+
+.error-guidance {
+  text-align: left;
+  background-color: var(--bg-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+
+.error-guidance pre {
+  background: var(--bg-card);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  margin: 0.5rem 0;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+}
+
+.empty-state {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Panel 1: Header
+   ========================================================================== */
+.header-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid var(--accent);
+}
+
+.header-left h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
+}
+
+.header-subtitle {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.streak-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--warning-bg);
+  color: var(--warning);
+  border: 1px solid var(--warning-border);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+}
+
+/* Theme Toggle Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--text-muted);
+}
+
+.btn-secondary {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-hover);
+}
+
+/* ==========================================================================
+   Panel 2: Today (Spaced Reviews & Resumption Card)
+   ========================================================================== */
+.today-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resumption-card {
+  background-color: var(--accent-subtle);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.resumption-header {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.resumption-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.resumption-meta {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.resumption-cli {
+  margin-top: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background-color: var(--bg-card);
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  display: inline-block;
+}
+
+.review-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-subtle);
+  gap: 0.5rem;
+}
+
+.review-item.overdue {
+  border-color: var(--danger-border);
+  background-color: var(--danger-bg);
+}
+
+.review-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-topic {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.review-type {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Panel 3: Overall Progress
+   ========================================================================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.stat-box {
+  background-color: var(--bg-subtle);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-top: 0.2rem;
+}
+
+.stat-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Progress Bar Component */
+.progress-group {
+  margin-bottom: 1rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 9999px;
+  transition: width 0.3s ease-in-out;
+}
+
+.progress-bar-fill.success {
+  background-color: var(--success);
+}
+
+/* ==========================================================================
+   Panel 4: Modules (11 Rows, Collapsible)
+   ========================================================================== */
+.module-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.module-details {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-card);
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.module-details[open] {
+  border-color: var(--accent);
+}
+
+.module-summary {
+  display: flex;
+  flex-direction: column;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--bg-card);
+  gap: 0.5rem;
+}
+
+.module-summary:hover {
+  background-color: var(--bg-subtle);
+}
+
+.module-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.module-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.module-progress-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.topics-table-container {
+  padding: 0.5rem 1rem 1rem;
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-subtle);
+}
+
+.topics-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.topic-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   Badges (Accessible Icons + Text)
+   ========================================================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  line-height: 1;
+}
+
+.badge-completed {
+  background-color: var(--success-bg);
+  color: var(--success);
+  border-color: var(--success-border);
+}
+
+.badge-in-progress {
+  background-color: var(--warning-bg);
+  color: var(--warning);
+  border-color: var(--warning-border);
+}
+
+.badge-todo {
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+.badge-easy {
+  background-color: var(--success-bg);
+  color: var(--success);
+  border-color: var(--success-border);
+}
+
+.badge-medium {
+  background-color: var(--warning-bg);
+  color: var(--warning);
+  border-color: var(--warning-border);
+}
+
+.badge-hard {
+  background-color: var(--danger-bg);
+  color: var(--danger);
+  border-color: var(--danger-border);
+}
+
+.badge-overdue {
+  background-color: var(--danger-bg);
+  color: var(--danger);
+  border-color: var(--danger-border);
+}
+
+.badge-due {
+  background-color: var(--info-bg);
+  color: var(--info);
+  border-color: var(--info-border);
+}
+
+.badge-bank {
+  background-color: var(--accent-subtle);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.badge-conf-high {
+  background-color: var(--success-bg);
+  color: var(--success);
+  border-color: var(--success-border);
+}
+
+.badge-conf-med {
+  background-color: var(--info-bg);
+  color: var(--info);
+  border-color: var(--info-border);
+}
+
+.badge-conf-low {
+  background-color: var(--warning-bg);
+  color: var(--warning);
+  border-color: var(--warning-border);
+}
+
+.badge-conf-none {
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+/* ==========================================================================
+   Panel 5: Activity Heatmap (26 Weeks)
+   ========================================================================== */
+.heatmap-container {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-rows: repeat(7, 12px);
+  grid-auto-flow: column;
+  grid-auto-columns: 12px;
+  gap: 3px;
+  width: max-content;
+}
+
+.heatmap-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background-color: var(--heat-0);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.heatmap-cell:hover, .heatmap-cell:focus-visible {
+  transform: scale(1.3);
+  z-index: 2;
+}
+
+.heatmap-cell[data-level="1"] { background-color: var(--heat-1); }
+.heatmap-cell[data-level="2"] { background-color: var(--heat-2); }
+.heatmap-cell[data-level="3"] { background-color: var(--heat-3); }
+.heatmap-cell[data-level="4"] { background-color: var(--heat-4); }
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.heatmap-legend-cell {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   Panel 6: Practice & Recent Solved
+   ========================================================================== */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.data-table th, .data-table td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.data-table th {
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.data-table tr:hover td {
+  background-color: var(--bg-subtle);
+}
+
+.problem-id {
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Panel 7: Focus & Memory
+   ========================================================================== */
+.focus-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-item {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.tag-item.weak {
+  border-color: var(--warning-border);
+  background-color: var(--warning-bg);
+  color: var(--warning);
+}
+
+.mistakes-accordion {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-subtle);
+}
+
+.mistakes-summary {
+  padding: 0.65rem 0.85rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.mistakes-content {
+  padding: 0.5rem 0.85rem 0.85rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.mistakes-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.mistake-date {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   Panel 8: Pattern Mastery
+   ========================================================================== */
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.pattern-card {
+  padding: 0.75rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pattern-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.pattern-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

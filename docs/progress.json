@@ -1,0 +1,362 @@
+{
+ "generated_for": "2026-11-22",
+ "overall": {
+  "topics_done": 0,
+  "topics_total": 60,
+  "bank_solved": 0,
+  "bank_total": 175,
+  "problems_solved_total": 0,
+  "streak_days": 0,
+  "active_days": 0
+ },
+ "state": {},
+ "modules": [
+  {
+   "number": 1,
+   "name": "Foundations, Bit Manipulation & Math for DSA",
+   "topics_total": 11,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Time & Space Complexity",
+     "status": "todo"
+    },
+    {
+     "name": "Java Foundations",
+     "status": "todo"
+    },
+    {
+     "name": "Bit Manipulation",
+     "status": "todo"
+    },
+    {
+     "name": "GCD, LCM & the Euclidean Algorithm",
+     "status": "todo"
+    },
+    {
+     "name": "Sieve of Eratosthenes & Primality",
+     "status": "todo"
+    },
+    {
+     "name": "Modular Arithmetic & Fast Exponentiation",
+     "status": "todo"
+    },
+    {
+     "name": "Combinatorics for DSA",
+     "status": "todo"
+    },
+    {
+     "name": "Catalan Numbers & Structural Counting",
+     "status": "todo"
+    },
+    {
+     "name": "Matrix Exponentiation",
+     "status": "todo"
+    },
+    {
+     "name": "Probability & Expected Value (light)",
+     "status": "todo"
+    },
+    {
+     "name": "Game Theory: Nim & Sprague-Grundy",
+     "status": "todo"
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "name": "Arrays, Strings & Core Array Patterns",
+   "topics_total": 8,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Arrays (1D/2D)",
+     "status": "todo"
+    },
+    {
+     "name": "Strings",
+     "status": "todo"
+    },
+    {
+     "name": "Two Pointers",
+     "status": "todo"
+    },
+    {
+     "name": "Sliding Window",
+     "status": "todo"
+    },
+    {
+     "name": "Prefix Sum & Difference Arrays",
+     "status": "todo"
+    },
+    {
+     "name": "Kadane's Algorithm (Max Subarray family)",
+     "status": "todo"
+    },
+    {
+     "name": "Cyclic Sort",
+     "status": "todo"
+    },
+    {
+     "name": "Merge Intervals",
+     "status": "todo"
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "name": "Linked Lists, Stacks, Queues & Monotonic Structures",
+   "topics_total": 5,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Linked Lists",
+     "status": "todo"
+    },
+    {
+     "name": "Stacks",
+     "status": "todo"
+    },
+    {
+     "name": "Monotonic Stack",
+     "status": "todo"
+    },
+    {
+     "name": "Queues / Deques",
+     "status": "todo"
+    },
+    {
+     "name": "Monotonic Queue (Sliding Window Max/Min)",
+     "status": "todo"
+    }
+   ]
+  },
+  {
+   "number": 4,
+   "name": "Hashing, Recursion, Backtracking & Divide-and-Conquer",
+   "topics_total": 4,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Hashing (HashMap/HashSet)",
+     "status": "todo"
+    },
+    {
+     "name": "Recursion",
+     "status": "todo"
+    },
+    {
+     "name": "Backtracking",
+     "status": "todo"
+    },
+    {
+     "name": "Divide & Conquer",
+     "status": "todo"
+    }
+   ]
+  },
+  {
+   "number": 5,
+   "name": "Searching & Sorting",
+   "topics_total": 3,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Sorting Algorithms",
+     "status": "todo"
+    },
+    {
+     "name": "Binary Search",
+     "status": "todo"
+    },
+    {
+     "name": "Binary Search on Answer / Variants",
+     "status": "todo"
+    }
+   ]
+  },
+  {
+   "number": 6,
+   "name": "Trees & Heaps",
+   "topics_total": 4,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Binary Trees",
+     "status": "todo"
+    },
+    {
+     "name": "Binary Search Trees (BST)",
+     "status": "todo"
+    },
+    {
+     "name": "Balanced BST Concepts (AVL/Red-Black, `TreeMap`/`TreeSet`)",
+     "status": "todo"
+    },
+    {
+     "name": "Heaps / Priority Queues",
+     "status": "todo"
+    }
+   ]
+  },
+  {
+   "number": 7,
+   "name": "Tries & String Algorithms",
+   "topics_total": 5,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Tries (Prefix Trees)",
+     "status": "todo"
+    },
+    {
+     "name": "KMP (Knuth-Morris-Pratt)",
+     "status": "todo"
+    },
+    {
+     "name": "Rabin-Karp / Rolling Hash",
+     "status": "todo"
+    },
+    {
+     "name": "Z-Function",
+     "status": "todo"
+    },
+    {
+     "name": "Manacher's Algorithm",
+     "status": "todo"
+    }
+   ]
+  },
+  {
+   "number": 8,
+   "name": "Greedy & Dynamic Programming",
+   "topics_total": 8,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Greedy Algorithms",
+     "status": "todo"
+    },
+    {
+     "name": "Dynamic Programming (1D)",
+     "status": "todo"
+    },
+    {
+     "name": "Dynamic Programming (2D) & Knapsack Variants",
+     "status": "todo"
+    },
+    {
+     "name": "Interval DP",
+     "status": "todo"
+    },
+    {
+     "name": "DP on Trees",
+     "status": "todo"
+    },
+    {
+     "name": "Bitmask DP",
+     "status": "todo"
+    },
+    {
+     "name": "Digit DP",
+     "status": "todo"
+    },
+    {
+     "name": "Game Theory + DP (optimal-play games)",
+     "status": "todo"
+    }
+   ]
+  },
+  {
+   "number": 9,
+   "name": "Graph Theory",
+   "topics_total": 7,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Graph Fundamentals & Traversals",
+     "status": "todo"
+    },
+    {
+     "name": "Topological Sort",
+     "status": "todo"
+    },
+    {
+     "name": "Union-Find (Disjoint Set)",
+     "status": "todo"
+    },
+    {
+     "name": "Bipartite Graphs & Graph Coloring",
+     "status": "todo"
+    },
+    {
+     "name": "Shortest Paths",
+     "status": "todo"
+    },
+    {
+     "name": "Minimum Spanning Trees",
+     "status": "todo"
+    },
+    {
+     "name": "Strongly Connected Components & Bridges/Articulation Points",
+     "status": "todo"
+    }
+   ]
+  },
+  {
+   "number": 10,
+   "name": "Advanced Data Structures",
+   "topics_total": 4,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Segment Trees (incl. Lazy Propagation)",
+     "status": "todo"
+    },
+    {
+     "name": "Fenwick Tree (Binary Indexed Tree)",
+     "status": "todo"
+    },
+    {
+     "name": "Sparse Table",
+     "status": "todo"
+    },
+    {
+     "name": "Sqrt Decomposition",
+     "status": "todo"
+    }
+   ]
+  },
+  {
+   "number": 11,
+   "name": "Design Problems",
+   "topics_total": 1,
+   "topics_done": 0,
+   "topics_in_progress": 0,
+   "topics": [
+    {
+     "name": "Design Problems (LRU/LFU Cache, rate limiters, streaming structures)",
+     "status": "todo"
+    }
+   ]
+  }
+ ],
+ "reviews_due": [],
+ "reviews_upcoming": [],
+ "weak_areas": [],
+ "homework": [],
+ "patterns": {},
+ "recent_solved": [],
+ "mistakes_recent": [],
+ "activity": {}
+}

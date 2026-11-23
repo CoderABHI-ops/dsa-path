@@ -1,0 +1,2482 @@
+{
+ "totals": {
+  "modules": 11,
+  "topics": 60,
+  "bank_problems": 175
+ },
+ "modules": [
+  {
+   "number": 1,
+   "name": "Foundations, Bit Manipulation & Math for DSA",
+   "file": "m01-foundations-bit-manipulation-and-math-for-dsa.md",
+   "topics": [
+    {
+     "id": "time-space-complexity",
+     "name": "Time & Space Complexity",
+     "note": null,
+     "purpose": "Measure algorithm efficiency",
+     "difficulty": "Easy",
+     "prereqs": "None",
+     "effort_days": 3.0,
+     "freq_pct": 100.0
+    },
+    {
+     "id": "java-foundations",
+     "name": "Java Foundations",
+     "note": null,
+     "purpose": "Syntax, memory model, primitives vs. objects, I/O, collections overview",
+     "difficulty": "Easy",
+     "prereqs": "None",
+     "effort_days": 3.0,
+     "freq_pct": null
+    },
+    {
+     "id": "bit-manipulation",
+     "name": "Bit Manipulation",
+     "note": null,
+     "purpose": "AND/OR/XOR/shift tricks, masks, subset-via-bitmask",
+     "difficulty": "Medium",
+     "prereqs": "Java Foundations",
+     "effort_days": 3.0,
+     "freq_pct": 40.0
+    },
+    {
+     "id": "gcd-lcm-the-euclidean-algorithm",
+     "name": "GCD, LCM & the Euclidean Algorithm",
+     "note": null,
+     "purpose": "Divisibility, `gcd(a,b)`, Extended Euclid",
+     "difficulty": "Easy-Med",
+     "prereqs": "Java Foundations",
+     "effort_days": 1.0,
+     "freq_pct": 20.0
+    },
+    {
+     "id": "sieve-of-eratosthenes-primality",
+     "name": "Sieve of Eratosthenes & Primality",
+     "note": null,
+     "purpose": "Fast prime generation/checking/factorization",
+     "difficulty": "Easy-Med",
+     "prereqs": "GCD/LCM",
+     "effort_days": 2.0,
+     "freq_pct": 20.0
+    },
+    {
+     "id": "modular-arithmetic-fast-exponentiation",
+     "name": "Modular Arithmetic & Fast Exponentiation",
+     "note": null,
+     "purpose": "Binary exponentiation; modular inverse via Fermat's Little Theorem and Extended Euclid",
+     "difficulty": "Medium",
+     "prereqs": "GCD/LCM",
+     "effort_days": 2.0,
+     "freq_pct": 30.0
+    },
+    {
+     "id": "combinatorics-for-dsa",
+     "name": "Combinatorics for DSA",
+     "note": null,
+     "purpose": "Permutations, combinations, `nCr` (with mod), Pascal's Triangle, binomial theorem",
+     "difficulty": "Medium",
+     "prereqs": "Modular Arithmetic",
+     "effort_days": 3.0,
+     "freq_pct": 25.0
+    },
+    {
+     "id": "catalan-numbers-structural-counting",
+     "name": "Catalan Numbers & Structural Counting",
+     "note": null,
+     "purpose": "Recognizing the Catalan recurrence (balanced parens, BST shapes, polygon triangulation)",
+     "difficulty": "Med-Hard",
+     "prereqs": "Combinatorics",
+     "effort_days": 1.0,
+     "freq_pct": 10.0
+    },
+    {
+     "id": "matrix-exponentiation",
+     "name": "Matrix Exponentiation",
+     "note": "teach after Module 4 — see note above",
+     "purpose": "Solving linear recurrences in O(log n) via matrix powers",
+     "difficulty": "Hard",
+     "prereqs": "Modular Arithmetic & Fast Exponentiation",
+     "effort_days": 2.0,
+     "freq_pct": 8.0
+    },
+    {
+     "id": "probability-expected-value-light",
+     "name": "Probability & Expected Value (light)",
+     "note": null,
+     "purpose": "Basic probability, linearity of expectation, reservoir sampling",
+     "difficulty": "Medium",
+     "prereqs": "Combinatorics",
+     "effort_days": 2.0,
+     "freq_pct": 10.0
+    },
+    {
+     "id": "game-theory-nim-sprague-grundy",
+     "name": "Game Theory: Nim & Sprague-Grundy",
+     "note": "pure-math part now; DP-flavored games in Module 8",
+     "purpose": "Winning/losing positions, XOR-of-piles insight",
+     "difficulty": "Med-Hard",
+     "prereqs": "Combinatorics",
+     "effort_days": 1.0,
+     "freq_pct": 5.0
+    }
+   ],
+   "bank_size": 27
+  },
+  {
+   "number": 2,
+   "name": "Arrays, Strings & Core Array Patterns",
+   "file": "m02-arrays-strings-and-core-array-patterns.md",
+   "topics": [
+    {
+     "id": "arrays-1d-2d",
+     "name": "Arrays (1D/2D)",
+     "note": null,
+     "purpose": "Contiguous memory, indexing, in-place ops",
+     "difficulty": "Easy",
+     "prereqs": "Module 1",
+     "effort_days": 4.0,
+     "freq_pct": 95.0
+    },
+    {
+     "id": "strings",
+     "name": "Strings",
+     "note": null,
+     "purpose": "Char arrays, Java immutability, `StringBuilder`",
+     "difficulty": "Easy-Med",
+     "prereqs": "Arrays",
+     "effort_days": 4.0,
+     "freq_pct": 85.0
+    },
+    {
+     "id": "two-pointers",
+     "name": "Two Pointers",
+     "note": null,
+     "purpose": "Opposing/same-direction pointers over a sorted or linear structure",
+     "difficulty": "Medium",
+     "prereqs": "Arrays",
+     "effort_days": 3.0,
+     "freq_pct": 75.0
+    },
+    {
+     "id": "sliding-window",
+     "name": "Sliding Window",
+     "note": null,
+     "purpose": "Maintain a shrinking/growing window with a running invariant",
+     "difficulty": "Medium",
+     "prereqs": "Two Pointers",
+     "effort_days": 4.0,
+     "freq_pct": 80.0
+    },
+    {
+     "id": "prefix-sum-difference-arrays",
+     "name": "Prefix Sum & Difference Arrays",
+     "note": null,
+     "purpose": "Precompute cumulative sums for O(1) range queries/updates",
+     "difficulty": "Easy-Med",
+     "prereqs": "Arrays",
+     "effort_days": 2.0,
+     "freq_pct": 55.0
+    },
+    {
+     "id": "kadane-s-algorithm-max-subarray-family",
+     "name": "Kadane's Algorithm (Max Subarray family)",
+     "note": null,
+     "purpose": "Running-best local/global tracking",
+     "difficulty": "Medium",
+     "prereqs": "Arrays",
+     "effort_days": 1.0,
+     "freq_pct": 40.0
+    },
+    {
+     "id": "cyclic-sort",
+     "name": "Cyclic Sort",
+     "note": null,
+     "purpose": "In-place placement when values live in `[1, n]`",
+     "difficulty": "Medium",
+     "prereqs": "Arrays",
+     "effort_days": 1.0,
+     "freq_pct": 20.0
+    },
+    {
+     "id": "merge-intervals",
+     "name": "Merge Intervals",
+     "note": null,
+     "purpose": "Sort + sweep over overlapping ranges",
+     "difficulty": "Medium",
+     "prereqs": "Sorting (Module 5, soft ref)",
+     "effort_days": 2.0,
+     "freq_pct": 35.0
+    }
+   ],
+   "bank_size": 30
+  },
+  {
+   "number": 3,
+   "name": "Linked Lists, Stacks, Queues & Monotonic Structures",
+   "file": "m03-linked-lists-stacks-queues-and-monotonic-structu.md",
+   "topics": [
+    {
+     "id": "linked-lists",
+     "name": "Linked Lists",
+     "note": null,
+     "purpose": "Dynamic memory via nodes, pointer manipulation",
+     "difficulty": "Medium",
+     "prereqs": "Arrays",
+     "effort_days": 4.0,
+     "freq_pct": 55.0
+    },
+    {
+     "id": "stacks",
+     "name": "Stacks",
+     "note": null,
+     "purpose": "LIFO ops; the base for parsing and DFS-without-recursion",
+     "difficulty": "Medium",
+     "prereqs": "Arrays/LL",
+     "effort_days": 3.0,
+     "freq_pct": 65.0
+    },
+    {
+     "id": "monotonic-stack",
+     "name": "Monotonic Stack",
+     "note": null,
+     "purpose": "Maintain increasing/decreasing order to answer \"next greater/smaller\" in O(n)",
+     "difficulty": "Medium",
+     "prereqs": "Stacks",
+     "effort_days": 2.0,
+     "freq_pct": 40.0
+    },
+    {
+     "id": "queues-deques",
+     "name": "Queues / Deques",
+     "note": null,
+     "purpose": "FIFO / double-ended ops",
+     "difficulty": "Easy-Med",
+     "prereqs": "Arrays/LL",
+     "effort_days": 3.0,
+     "freq_pct": 55.0
+    },
+    {
+     "id": "monotonic-queue-sliding-window-max-min",
+     "name": "Monotonic Queue (Sliding Window Max/Min)",
+     "note": null,
+     "purpose": "Deque that keeps window extrema in O(1) amortized",
+     "difficulty": "Medium",
+     "prereqs": "Queues, Monotonic Stack",
+     "effort_days": 2.0,
+     "freq_pct": 15.0
+    }
+   ],
+   "bank_size": 17
+  },
+  {
+   "number": 4,
+   "name": "Hashing, Recursion, Backtracking & Divide-and-Conquer",
+   "file": "m04-hashing-recursion-backtracking-and-divide-and-co.md",
+   "topics": [
+    {
+     "id": "hashing-hashmap-hashset",
+     "name": "Hashing (HashMap/HashSet)",
+     "note": null,
+     "purpose": "O(1) amortized lookups",
+     "difficulty": "Easy-Med",
+     "prereqs": "Arrays",
+     "effort_days": 4.0,
+     "freq_pct": 95.0
+    },
+    {
+     "id": "recursion",
+     "name": "Recursion",
+     "note": null,
+     "purpose": "Function calling itself, state passing, call-stack intuition",
+     "difficulty": "Medium",
+     "prereqs": "Stacks",
+     "effort_days": 5.0,
+     "freq_pct": 90.0
+    },
+    {
+     "id": "backtracking",
+     "name": "Backtracking",
+     "note": null,
+     "purpose": "Explore all paths, prune invalid ones",
+     "difficulty": "Hard",
+     "prereqs": "Recursion",
+     "effort_days": 6.0,
+     "freq_pct": 70.0
+    },
+    {
+     "id": "divide-conquer",
+     "name": "Divide & Conquer",
+     "note": null,
+     "purpose": "Split, solve independently, merge",
+     "difficulty": "Medium",
+     "prereqs": "Recursion",
+     "effort_days": 3.0,
+     "freq_pct": 25.0
+    }
+   ],
+   "bank_size": 17
+  },
+  {
+   "number": 5,
+   "name": "Searching & Sorting",
+   "file": "m05-searching-and-sorting.md",
+   "topics": [
+    {
+     "id": "sorting-algorithms",
+     "name": "Sorting Algorithms",
+     "note": null,
+     "purpose": "Merge, Quick, Counting, Radix, Insertion — and Java's actual sort internals",
+     "difficulty": "Medium",
+     "prereqs": "Arrays, Recursion",
+     "effort_days": 5.0,
+     "freq_pct": 40.0
+    },
+    {
+     "id": "binary-search",
+     "name": "Binary Search",
+     "note": null,
+     "purpose": "O(log n) search on sorted/monotonic space",
+     "difficulty": "Medium",
+     "prereqs": "Arrays",
+     "effort_days": 4.0,
+     "freq_pct": 85.0
+    },
+    {
+     "id": "binary-search-on-answer-variants",
+     "name": "Binary Search on Answer / Variants",
+     "note": null,
+     "purpose": "Searching a monotonic *answer* space, not just an array",
+     "difficulty": "Hard",
+     "prereqs": "Binary Search",
+     "effort_days": 5.0,
+     "freq_pct": 60.0
+    }
+   ],
+   "bank_size": 11
+  },
+  {
+   "number": 6,
+   "name": "Trees & Heaps",
+   "file": "m06-trees-and-heaps.md",
+   "topics": [
+    {
+     "id": "binary-trees",
+     "name": "Binary Trees",
+     "note": null,
+     "purpose": "Hierarchical data, traversals",
+     "difficulty": "Medium",
+     "prereqs": "Recursion",
+     "effort_days": 5.0,
+     "freq_pct": 85.0
+    },
+    {
+     "id": "binary-search-trees-bst",
+     "name": "Binary Search Trees (BST)",
+     "note": null,
+     "purpose": "Ordered tree structure and its invariants",
+     "difficulty": "Medium",
+     "prereqs": "Binary Trees",
+     "effort_days": 3.0,
+     "freq_pct": 55.0
+    },
+    {
+     "id": "balanced-bst-concepts-avl-red-black-treemap-treeset",
+     "name": "Balanced BST Concepts (AVL/Red-Black, `TreeMap`/`TreeSet`)",
+     "note": null,
+     "purpose": "*Conceptual* understanding of self-balancing — not implementing rotations",
+     "difficulty": "Med",
+     "prereqs": "BST",
+     "effort_days": 1.0,
+     "freq_pct": 25.0
+    },
+    {
+     "id": "heaps-priority-queues",
+     "name": "Heaps / Priority Queues",
+     "note": null,
+     "purpose": "Efficient \"top/bottom K\" access",
+     "difficulty": "Medium",
+     "prereqs": "Trees",
+     "effort_days": 4.0,
+     "freq_pct": 70.0
+    }
+   ],
+   "bank_size": 16
+  },
+  {
+   "number": 7,
+   "name": "Tries & String Algorithms",
+   "file": "m07-tries-and-string-algorithms.md",
+   "topics": [
+    {
+     "id": "tries-prefix-trees",
+     "name": "Tries (Prefix Trees)",
+     "note": null,
+     "purpose": "Efficient string search & prefix matching",
+     "difficulty": "Med-Hard",
+     "prereqs": "Strings, Trees",
+     "effort_days": 3.0,
+     "freq_pct": 40.0
+    },
+    {
+     "id": "kmp-knuth-morris-pratt",
+     "name": "KMP (Knuth-Morris-Pratt)",
+     "note": null,
+     "purpose": "Linear-time substring search via the LPS/failure array",
+     "difficulty": "Hard",
+     "prereqs": "Strings, Recursion",
+     "effort_days": 3.0,
+     "freq_pct": 15.0
+    },
+    {
+     "id": "rabin-karp-rolling-hash",
+     "name": "Rabin-Karp / Rolling Hash",
+     "note": null,
+     "purpose": "Hash-based substring search and comparison",
+     "difficulty": "Medium",
+     "prereqs": "Strings",
+     "effort_days": 2.0,
+     "freq_pct": 12.0
+    },
+    {
+     "id": "z-function",
+     "name": "Z-Function",
+     "note": null,
+     "purpose": "Linear-time prefix-matching array, KMP's cleaner cousin",
+     "difficulty": "Hard",
+     "prereqs": "KMP",
+     "effort_days": 2.0,
+     "freq_pct": 8.0
+    },
+    {
+     "id": "manacher-s-algorithm",
+     "name": "Manacher's Algorithm",
+     "note": null,
+     "purpose": "Linear-time longest-palindromic-substring",
+     "difficulty": "Hard",
+     "prereqs": "Strings, Two Pointers",
+     "effort_days": 2.0,
+     "freq_pct": 10.0
+    }
+   ],
+   "bank_size": 13
+  },
+  {
+   "number": 8,
+   "name": "Greedy & Dynamic Programming",
+   "file": "m08-greedy-and-dynamic-programming.md",
+   "topics": [
+    {
+     "id": "greedy-algorithms",
+     "name": "Greedy Algorithms",
+     "note": null,
+     "purpose": "Local optimum → global optimum, with proof-by-counterexample discipline",
+     "difficulty": "Medium",
+     "prereqs": "Sorting, Heaps",
+     "effort_days": 4.0,
+     "freq_pct": 55.0
+    },
+    {
+     "id": "dynamic-programming-1d",
+     "name": "Dynamic Programming (1D)",
+     "note": null,
+     "purpose": "Memoization & tabulation over a single state dimension",
+     "difficulty": "Hard",
+     "prereqs": "Recursion",
+     "effort_days": 7.0,
+     "freq_pct": 80.0
+    },
+    {
+     "id": "dynamic-programming-2d-knapsack-variants",
+     "name": "Dynamic Programming (2D) & Knapsack Variants",
+     "note": null,
+     "purpose": "Grids, strings, 0/1 and unbounded knapsack",
+     "difficulty": "Very Hard",
+     "prereqs": "DP 1D",
+     "effort_days": 7.0,
+     "freq_pct": 70.0
+    },
+    {
+     "id": "interval-dp",
+     "name": "Interval DP",
+     "note": null,
+     "purpose": "DP over `[i, j]` ranges with a split point",
+     "difficulty": "Very Hard",
+     "prereqs": "DP 2D",
+     "effort_days": 3.0,
+     "freq_pct": 15.0
+    },
+    {
+     "id": "dp-on-trees",
+     "name": "DP on Trees",
+     "note": null,
+     "purpose": "DP where the state flows along tree edges, not array indices",
+     "difficulty": "Hard",
+     "prereqs": "DP 1D, Binary Trees",
+     "effort_days": 3.0,
+     "freq_pct": 15.0
+    },
+    {
+     "id": "bitmask-dp",
+     "name": "Bitmask DP",
+     "note": null,
+     "purpose": "DP where the state is a subset, encoded as an integer bitmask",
+     "difficulty": "Very Hard",
+     "prereqs": "DP 1D, Bit Manipulation",
+     "effort_days": 4.0,
+     "freq_pct": 12.0
+    },
+    {
+     "id": "digit-dp",
+     "name": "Digit DP",
+     "note": null,
+     "purpose": "DP over the digits of a number, tracking a \"tight\" bound flag",
+     "difficulty": "Very Hard",
+     "prereqs": "DP 1D, Bit Manipulation",
+     "effort_days": 3.0,
+     "freq_pct": 6.0
+    },
+    {
+     "id": "game-theory-dp-optimal-play-games",
+     "name": "Game Theory + DP (optimal-play games)",
+     "note": null,
+     "purpose": "Modeling two-player optimal play as a DP/minimax recurrence",
+     "difficulty": "Hard",
+     "prereqs": "DP 1D, Module 1 Game Theory",
+     "effort_days": 2.0,
+     "freq_pct": 8.0
+    }
+   ],
+   "bank_size": 32
+  },
+  {
+   "number": 9,
+   "name": "Graph Theory",
+   "file": "m09-graph-theory.md",
+   "topics": [
+    {
+     "id": "graph-fundamentals-traversals",
+     "name": "Graph Fundamentals & Traversals",
+     "note": null,
+     "purpose": "BFS, DFS, adjacency list/matrix, multi-source BFS",
+     "difficulty": "Medium",
+     "prereqs": "Trees, Queues",
+     "effort_days": 5.0,
+     "freq_pct": 80.0
+    },
+    {
+     "id": "topological-sort",
+     "name": "Topological Sort",
+     "note": null,
+     "purpose": "Dependency resolution (Kahn's algorithm and DFS-based)",
+     "difficulty": "Medium",
+     "prereqs": "Graph Fundamentals",
+     "effort_days": 2.0,
+     "freq_pct": 55.0
+    },
+    {
+     "id": "union-find-disjoint-set",
+     "name": "Union-Find (Disjoint Set)",
+     "note": null,
+     "purpose": "Cycle detection, dynamic connectivity, with path compression + union by rank",
+     "difficulty": "Medium",
+     "prereqs": "Graph Fundamentals",
+     "effort_days": 3.0,
+     "freq_pct": 55.0
+    },
+    {
+     "id": "bipartite-graphs-graph-coloring",
+     "name": "Bipartite Graphs & Graph Coloring",
+     "note": null,
+     "purpose": "2-coloring via BFS/DFS to test bipartiteness",
+     "difficulty": "Medium",
+     "prereqs": "Graph Fundamentals",
+     "effort_days": 1.0,
+     "freq_pct": 20.0
+    },
+    {
+     "id": "shortest-paths",
+     "name": "Shortest Paths",
+     "note": null,
+     "purpose": "Dijkstra, Bellman-Ford, Floyd-Warshall",
+     "difficulty": "Hard",
+     "prereqs": "Graph Fundamentals, Heaps",
+     "effort_days": 5.0,
+     "freq_pct": 45.0
+    },
+    {
+     "id": "minimum-spanning-trees",
+     "name": "Minimum Spanning Trees",
+     "note": null,
+     "purpose": "Kruskal's, Prim's",
+     "difficulty": "Hard",
+     "prereqs": "Graphs, Union-Find, Heaps",
+     "effort_days": 3.0,
+     "freq_pct": 25.0
+    },
+    {
+     "id": "strongly-connected-components-bridges-articulation-points",
+     "name": "Strongly Connected Components & Bridges/Articulation Points",
+     "note": null,
+     "purpose": "Tarjan's (SCC and bridges), Kosaraju's (SCC)",
+     "difficulty": "Very Hard",
+     "prereqs": "Graph Fundamentals",
+     "effort_days": 4.0,
+     "freq_pct": 8.0
+    }
+   ],
+   "bank_size": 19
+  },
+  {
+   "number": 10,
+   "name": "Advanced Data Structures",
+   "file": "m10-advanced-data-structures.md",
+   "topics": [
+    {
+     "id": "segment-trees-incl-lazy-propagation",
+     "name": "Segment Trees (incl. Lazy Propagation)",
+     "note": null,
+     "purpose": "Range queries + range/point updates in O(log n)",
+     "difficulty": "Very Hard",
+     "prereqs": "Trees, Recursion",
+     "effort_days": 4.0,
+     "freq_pct": 20.0
+    },
+    {
+     "id": "fenwick-tree-binary-indexed-tree",
+     "name": "Fenwick Tree (Binary Indexed Tree)",
+     "note": null,
+     "purpose": "Range sum/frequency queries + point updates in O(log n), simpler and more space-efficient than a segment tree",
+     "difficulty": "Hard",
+     "prereqs": "Prefix Sum, Bit Manipulation",
+     "effort_days": 3.0,
+     "freq_pct": 15.0
+    },
+    {
+     "id": "sparse-table",
+     "name": "Sparse Table",
+     "note": null,
+     "purpose": "O(1) range queries on **static** (immutable) data after O(n log n) preprocessing",
+     "difficulty": "Medium",
+     "prereqs": "Prefix Sum",
+     "effort_days": 1.0,
+     "freq_pct": 5.0
+    },
+    {
+     "id": "sqrt-decomposition",
+     "name": "Sqrt Decomposition",
+     "note": null,
+     "purpose": "Block-based range queries as a simpler (if asymptotically weaker) alternative to a segment tree",
+     "difficulty": "Medium",
+     "prereqs": "Arrays",
+     "effort_days": 1.0,
+     "freq_pct": 3.0
+    }
+   ],
+   "bank_size": 5
+  },
+  {
+   "number": 11,
+   "name": "Design Problems",
+   "file": "m11-design-problems.md",
+   "topics": [
+    {
+     "id": "design-problems-lru-lfu-cache-rate-limiters-streaming-structures",
+     "name": "Design Problems (LRU/LFU Cache, rate limiters, streaming structures)",
+     "note": null,
+     "purpose": "Combine 2+ data structures to hit specific complexity targets per operation",
+     "difficulty": "Hard",
+     "prereqs": "Hashing, Linked Lists, Heaps",
+     "effort_days": 4.0,
+     "freq_pct": 35.0
+    }
+   ],
+   "bank_size": 5
+  }
+ ],
+ "bank": [
+  {
+   "lc": 1,
+   "title": "Two Sum",
+   "difficulty": "Easy",
+   "group": "Arrays",
+   "module": 2,
+   "url": "https://leetcode.com/problems/two-sum/",
+   "note": null,
+   "also_in_modules": [
+    4
+   ]
+  },
+  {
+   "lc": 3,
+   "title": "Longest Substring Without Repeating Characters",
+   "difficulty": "Medium",
+   "group": "Sliding Window",
+   "module": 2,
+   "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 4,
+   "title": "Median of Two Sorted Arrays",
+   "difficulty": "Hard",
+   "group": "Divide & Conquer",
+   "module": 4,
+   "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+   "note": null,
+   "also_in_modules": [
+    5
+   ]
+  },
+  {
+   "lc": 5,
+   "title": "Longest Palindromic Substring",
+   "difficulty": "Medium",
+   "group": "Strings",
+   "module": 2,
+   "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+   "note": "revisit with Manacher's in Module 7",
+   "also_in_modules": [
+    7
+   ]
+  },
+  {
+   "lc": 10,
+   "title": "Regular Expression Matching",
+   "difficulty": "Hard",
+   "group": "DP (2D) & Knapsack",
+   "module": 8,
+   "url": "https://leetcode.com/problems/regular-expression-matching/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 11,
+   "title": "Container With Most Water",
+   "difficulty": "Medium",
+   "group": "Two Pointers",
+   "module": 2,
+   "url": "https://leetcode.com/problems/container-with-most-water/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 15,
+   "title": "3Sum",
+   "difficulty": "Medium",
+   "group": "Two Pointers",
+   "module": 2,
+   "url": "https://leetcode.com/problems/3sum/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 17,
+   "title": "Letter Combinations of a Phone Number",
+   "difficulty": "Medium",
+   "group": "Backtracking",
+   "module": 4,
+   "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 19,
+   "title": "Remove Nth Node From End of List",
+   "difficulty": "Medium",
+   "group": "Linked Lists",
+   "module": 3,
+   "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 20,
+   "title": "Valid Parentheses",
+   "difficulty": "Easy",
+   "group": "Stacks",
+   "module": 3,
+   "url": "https://leetcode.com/problems/valid-parentheses/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 21,
+   "title": "Merge Two Sorted Lists",
+   "difficulty": "Easy",
+   "group": "Linked Lists",
+   "module": 3,
+   "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 22,
+   "title": "Generate Parentheses",
+   "difficulty": "Medium",
+   "group": "Catalan Numbers",
+   "module": 1,
+   "url": "https://leetcode.com/problems/generate-parentheses/",
+   "note": null,
+   "also_in_modules": [
+    4
+   ]
+  },
+  {
+   "lc": 23,
+   "title": "Merge k Sorted Lists",
+   "difficulty": "Hard",
+   "group": "Linked Lists",
+   "module": 3,
+   "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
+   "note": null,
+   "also_in_modules": [
+    6
+   ]
+  },
+  {
+   "lc": 25,
+   "title": "Reverse Nodes in k-Group",
+   "difficulty": "Hard",
+   "group": "Linked Lists",
+   "module": 3,
+   "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 28,
+   "title": "Find the Index of the First Occurrence in a String",
+   "difficulty": "Easy",
+   "group": "KMP",
+   "module": 7,
+   "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+   "note": "implement KMP by hand here, don't just call `indexOf`",
+   "also_in_modules": []
+  },
+  {
+   "lc": 33,
+   "title": "Search in Rotated Sorted Array",
+   "difficulty": "Medium",
+   "group": "Binary Search",
+   "module": 5,
+   "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 34,
+   "title": "Find First and Last Position of Element in Sorted Array",
+   "difficulty": "Medium",
+   "group": "Binary Search",
+   "module": 5,
+   "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 39,
+   "title": "Combination Sum",
+   "difficulty": "Medium",
+   "group": "Backtracking",
+   "module": 4,
+   "url": "https://leetcode.com/problems/combination-sum/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 41,
+   "title": "First Missing Positive",
+   "difficulty": "Hard",
+   "group": "Arrays",
+   "module": 2,
+   "url": "https://leetcode.com/problems/first-missing-positive/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 42,
+   "title": "Trapping Rain Water",
+   "difficulty": "Hard",
+   "group": "Two Pointers",
+   "module": 2,
+   "url": "https://leetcode.com/problems/trapping-rain-water/",
+   "note": null,
+   "also_in_modules": [
+    3
+   ]
+  },
+  {
+   "lc": 45,
+   "title": "Jump Game II",
+   "difficulty": "Medium",
+   "group": "Greedy",
+   "module": 8,
+   "url": "https://leetcode.com/problems/jump-game-ii/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 46,
+   "title": "Permutations",
+   "difficulty": "Medium",
+   "group": "Backtracking",
+   "module": 4,
+   "url": "https://leetcode.com/problems/permutations/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 49,
+   "title": "Group Anagrams",
+   "difficulty": "Medium",
+   "group": "Strings",
+   "module": 2,
+   "url": "https://leetcode.com/problems/group-anagrams/",
+   "note": null,
+   "also_in_modules": [
+    4
+   ]
+  },
+  {
+   "lc": 50,
+   "title": "Pow(x, n)",
+   "difficulty": "Medium",
+   "group": "Modular Arithmetic, Fast Exponentiation & Modular Inverse",
+   "module": 1,
+   "url": "https://leetcode.com/problems/powx-n/",
+   "note": "binary exponentiation, the core template",
+   "also_in_modules": []
+  },
+  {
+   "lc": 51,
+   "title": "N-Queens",
+   "difficulty": "Hard",
+   "group": "Backtracking",
+   "module": 4,
+   "url": "https://leetcode.com/problems/n-queens/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 53,
+   "title": "Maximum Subarray",
+   "difficulty": "Medium",
+   "group": "Kadane's Algorithm",
+   "module": 2,
+   "url": "https://leetcode.com/problems/maximum-subarray/",
+   "note": "the definition of this pattern",
+   "also_in_modules": []
+  },
+  {
+   "lc": 55,
+   "title": "Jump Game",
+   "difficulty": "Medium",
+   "group": "Greedy",
+   "module": 8,
+   "url": "https://leetcode.com/problems/jump-game/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 56,
+   "title": "Merge Intervals",
+   "difficulty": "Medium",
+   "group": "Merge Intervals",
+   "module": 2,
+   "url": "https://leetcode.com/problems/merge-intervals/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 57,
+   "title": "Insert Interval",
+   "difficulty": "Medium",
+   "group": "Merge Intervals",
+   "module": 2,
+   "url": "https://leetcode.com/problems/insert-interval/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 62,
+   "title": "Unique Paths",
+   "difficulty": "Medium",
+   "group": "Combinatorics / Pascal's Triangle",
+   "module": 1,
+   "url": "https://leetcode.com/problems/unique-paths/",
+   "note": "solve it both as DP *and* as a closed-form `nCr`",
+   "also_in_modules": [
+    8
+   ]
+  },
+  {
+   "lc": 70,
+   "title": "Climbing Stairs",
+   "difficulty": "Easy",
+   "group": "Matrix Exponentiation",
+   "module": 1,
+   "url": "https://leetcode.com/problems/climbing-stairs/",
+   "note": "same recurrence, same upgrade path",
+   "also_in_modules": [
+    4,
+    8
+   ]
+  },
+  {
+   "lc": 72,
+   "title": "Edit Distance",
+   "difficulty": "Medium",
+   "group": "DP (2D) & Knapsack",
+   "module": 8,
+   "url": "https://leetcode.com/problems/edit-distance/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 75,
+   "title": "Sort Colors",
+   "difficulty": "Medium",
+   "group": "Sorting",
+   "module": 5,
+   "url": "https://leetcode.com/problems/sort-colors/",
+   "note": "Dutch national flag",
+   "also_in_modules": []
+  },
+  {
+   "lc": 76,
+   "title": "Minimum Window Substring",
+   "difficulty": "Hard",
+   "group": "Sliding Window",
+   "module": 2,
+   "url": "https://leetcode.com/problems/minimum-window-substring/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 78,
+   "title": "Subsets",
+   "difficulty": "Medium",
+   "group": "Bit Manipulation",
+   "module": 1,
+   "url": "https://leetcode.com/problems/subsets/",
+   "note": "solve it via bitmask, not just backtracking",
+   "also_in_modules": [
+    4
+   ]
+  },
+  {
+   "lc": 79,
+   "title": "Word Search",
+   "difficulty": "Medium",
+   "group": "Backtracking",
+   "module": 4,
+   "url": "https://leetcode.com/problems/word-search/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 84,
+   "title": "Largest Rectangle in Histogram",
+   "difficulty": "Hard",
+   "group": "Monotonic Stack",
+   "module": 3,
+   "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 95,
+   "title": "Unique Binary Search Trees II",
+   "difficulty": "Medium",
+   "group": "Catalan Numbers",
+   "module": 1,
+   "url": "https://leetcode.com/problems/unique-binary-search-trees-ii/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 96,
+   "title": "Unique Binary Search Trees",
+   "difficulty": "Medium",
+   "group": "Catalan Numbers",
+   "module": 1,
+   "url": "https://leetcode.com/problems/unique-binary-search-trees/",
+   "note": "the textbook Catalan problem",
+   "also_in_modules": []
+  },
+  {
+   "lc": 98,
+   "title": "Validate Binary Search Tree",
+   "difficulty": "Medium",
+   "group": "BST",
+   "module": 6,
+   "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 102,
+   "title": "Binary Tree Level Order Traversal",
+   "difficulty": "Medium",
+   "group": "Binary Trees",
+   "module": 6,
+   "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 104,
+   "title": "Maximum Depth of Binary Tree",
+   "difficulty": "Easy",
+   "group": "Binary Trees",
+   "module": 6,
+   "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 108,
+   "title": "Convert Sorted Array to Binary Search Tree",
+   "difficulty": "Easy",
+   "group": "BST",
+   "module": 6,
+   "url": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 118,
+   "title": "Pascal's Triangle",
+   "difficulty": "Easy",
+   "group": "Combinatorics / Pascal's Triangle",
+   "module": 1,
+   "url": "https://leetcode.com/problems/pascals-triangle/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 119,
+   "title": "Pascal's Triangle II",
+   "difficulty": "Easy",
+   "group": "Combinatorics / Pascal's Triangle",
+   "module": 1,
+   "url": "https://leetcode.com/problems/pascals-triangle-ii/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 124,
+   "title": "Binary Tree Maximum Path Sum",
+   "difficulty": "Hard",
+   "group": "Binary Trees",
+   "module": 6,
+   "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+   "note": null,
+   "also_in_modules": [
+    8
+   ]
+  },
+  {
+   "lc": 125,
+   "title": "Valid Palindrome",
+   "difficulty": "Easy",
+   "group": "Two Pointers",
+   "module": 2,
+   "url": "https://leetcode.com/problems/valid-palindrome/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 127,
+   "title": "Word Ladder",
+   "difficulty": "Hard",
+   "group": "Graph Fundamentals",
+   "module": 9,
+   "url": "https://leetcode.com/problems/word-ladder/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 128,
+   "title": "Longest Consecutive Sequence",
+   "difficulty": "Medium",
+   "group": "Hashing",
+   "module": 4,
+   "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 133,
+   "title": "Clone Graph",
+   "difficulty": "Medium",
+   "group": "Graph Fundamentals",
+   "module": 9,
+   "url": "https://leetcode.com/problems/clone-graph/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 134,
+   "title": "Gas Station",
+   "difficulty": "Medium",
+   "group": "Greedy",
+   "module": 8,
+   "url": "https://leetcode.com/problems/gas-station/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 136,
+   "title": "Single Number",
+   "difficulty": "Easy",
+   "group": "Bit Manipulation",
+   "module": 1,
+   "url": "https://leetcode.com/problems/single-number/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 138,
+   "title": "Copy List with Random Pointer",
+   "difficulty": "Medium",
+   "group": "Linked Lists",
+   "module": 3,
+   "url": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 139,
+   "title": "Word Break",
+   "difficulty": "Medium",
+   "group": "DP (1D)",
+   "module": 8,
+   "url": "https://leetcode.com/problems/word-break/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 141,
+   "title": "Linked List Cycle",
+   "difficulty": "Easy",
+   "group": "Linked Lists",
+   "module": 3,
+   "url": "https://leetcode.com/problems/linked-list-cycle/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 146,
+   "title": "LRU Cache",
+   "difficulty": "Medium",
+   "group": "General",
+   "module": 11,
+   "url": "https://leetcode.com/problems/lru-cache/",
+   "note": "the single most-asked design problem on LeetCode; know it cold",
+   "also_in_modules": []
+  },
+  {
+   "lc": 150,
+   "title": "Evaluate Reverse Polish Notation",
+   "difficulty": "Medium",
+   "group": "Stacks",
+   "module": 3,
+   "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 152,
+   "title": "Maximum Product Subarray",
+   "difficulty": "Medium",
+   "group": "Kadane's Algorithm",
+   "module": 2,
+   "url": "https://leetcode.com/problems/maximum-product-subarray/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 153,
+   "title": "Find Minimum in Rotated Sorted Array",
+   "difficulty": "Medium",
+   "group": "Binary Search",
+   "module": 5,
+   "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 155,
+   "title": "Min Stack",
+   "difficulty": "Medium",
+   "group": "Stacks",
+   "module": 3,
+   "url": "https://leetcode.com/problems/min-stack/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 162,
+   "title": "Find Peak Element",
+   "difficulty": "Medium",
+   "group": "Binary Search",
+   "module": 5,
+   "url": "https://leetcode.com/problems/find-peak-element/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 167,
+   "title": "Two Sum II - Input Array Is Sorted",
+   "difficulty": "Medium",
+   "group": "Two Pointers",
+   "module": 2,
+   "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 179,
+   "title": "Largest Number",
+   "difficulty": "Medium",
+   "group": "Sorting",
+   "module": 5,
+   "url": "https://leetcode.com/problems/largest-number/",
+   "note": "custom comparator",
+   "also_in_modules": []
+  },
+  {
+   "lc": 187,
+   "title": "Repeated DNA Sequences",
+   "difficulty": "Medium",
+   "group": "Rabin-Karp / Rolling Hash",
+   "module": 7,
+   "url": "https://leetcode.com/problems/repeated-dna-sequences/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 189,
+   "title": "Rotate Array",
+   "difficulty": "Medium",
+   "group": "Arrays",
+   "module": 2,
+   "url": "https://leetcode.com/problems/rotate-array/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 191,
+   "title": "Number of 1 Bits",
+   "difficulty": "Easy",
+   "group": "Bit Manipulation",
+   "module": 1,
+   "url": "https://leetcode.com/problems/number-of-1-bits/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 198,
+   "title": "House Robber",
+   "difficulty": "Medium",
+   "group": "DP (1D)",
+   "module": 8,
+   "url": "https://leetcode.com/problems/house-robber/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 200,
+   "title": "Number of Islands",
+   "difficulty": "Medium",
+   "group": "Graph Fundamentals",
+   "module": 9,
+   "url": "https://leetcode.com/problems/number-of-islands/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 201,
+   "title": "Bitwise AND of Numbers Range",
+   "difficulty": "Medium",
+   "group": "Bit Manipulation",
+   "module": 1,
+   "url": "https://leetcode.com/problems/bitwise-and-of-numbers-range/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 204,
+   "title": "Count Primes",
+   "difficulty": "Medium",
+   "group": "GCD/LCM & Sieve",
+   "module": 1,
+   "url": "https://leetcode.com/problems/count-primes/",
+   "note": "the canonical Sieve problem",
+   "also_in_modules": []
+  },
+  {
+   "lc": 206,
+   "title": "Reverse Linked List",
+   "difficulty": "Easy",
+   "group": "Linked Lists",
+   "module": 3,
+   "url": "https://leetcode.com/problems/reverse-linked-list/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 207,
+   "title": "Course Schedule",
+   "difficulty": "Medium",
+   "group": "Topological Sort",
+   "module": 9,
+   "url": "https://leetcode.com/problems/course-schedule/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 208,
+   "title": "Implement Trie (Prefix Tree)",
+   "difficulty": "Medium",
+   "group": "Tries",
+   "module": 7,
+   "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 209,
+   "title": "Minimum Size Subarray Sum",
+   "difficulty": "Medium",
+   "group": "Sliding Window",
+   "module": 2,
+   "url": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 210,
+   "title": "Course Schedule II",
+   "difficulty": "Medium",
+   "group": "Topological Sort",
+   "module": 9,
+   "url": "https://leetcode.com/problems/course-schedule-ii/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 211,
+   "title": "Design Add and Search Words Data Structure",
+   "difficulty": "Medium",
+   "group": "Tries",
+   "module": 7,
+   "url": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 212,
+   "title": "Word Search II",
+   "difficulty": "Hard",
+   "group": "Tries",
+   "module": 7,
+   "url": "https://leetcode.com/problems/word-search-ii/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 213,
+   "title": "House Robber II",
+   "difficulty": "Medium",
+   "group": "DP (1D)",
+   "module": 8,
+   "url": "https://leetcode.com/problems/house-robber-ii/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 214,
+   "title": "Shortest Palindrome",
+   "difficulty": "Hard",
+   "group": "Manacher's Algorithm",
+   "module": 7,
+   "url": "https://leetcode.com/problems/shortest-palindrome/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 215,
+   "title": "Kth Largest Element in an Array",
+   "difficulty": "Medium",
+   "group": "Divide & Conquer",
+   "module": 4,
+   "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+   "note": "Quickselect",
+   "also_in_modules": [
+    6
+   ]
+  },
+  {
+   "lc": 218,
+   "title": "The Skyline Problem",
+   "difficulty": "Hard",
+   "group": "Segment Trees / Fenwick Trees",
+   "module": 10,
+   "url": "https://leetcode.com/problems/the-skyline-problem/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 226,
+   "title": "Invert Binary Tree",
+   "difficulty": "Easy",
+   "group": "Binary Trees",
+   "module": 6,
+   "url": "https://leetcode.com/problems/invert-binary-tree/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 230,
+   "title": "Kth Smallest Element in a BST",
+   "difficulty": "Medium",
+   "group": "BST",
+   "module": 6,
+   "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 232,
+   "title": "Implement Queue using Stacks",
+   "difficulty": "Easy",
+   "group": "Queues / Deques",
+   "module": 3,
+   "url": "https://leetcode.com/problems/implement-queue-using-stacks/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 233,
+   "title": "Number of Digit One",
+   "difficulty": "Hard",
+   "group": "Digit DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/number-of-digit-one/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 235,
+   "title": "Lowest Common Ancestor of a Binary Search Tree",
+   "difficulty": "Medium",
+   "group": "BST",
+   "module": 6,
+   "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 236,
+   "title": "Lowest Common Ancestor of a Binary Tree",
+   "difficulty": "Medium",
+   "group": "Binary Trees",
+   "module": 6,
+   "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 238,
+   "title": "Product of Array Except Self",
+   "difficulty": "Medium",
+   "group": "Arrays",
+   "module": 2,
+   "url": "https://leetcode.com/problems/product-of-array-except-self/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 239,
+   "title": "Sliding Window Maximum",
+   "difficulty": "Hard",
+   "group": "Monotonic Queue",
+   "module": 3,
+   "url": "https://leetcode.com/problems/sliding-window-maximum/",
+   "note": "solve with a heap first, then again with a monotonic deque, and compare",
+   "also_in_modules": []
+  },
+  {
+   "lc": 242,
+   "title": "Valid Anagram",
+   "difficulty": "Easy",
+   "group": "Strings",
+   "module": 2,
+   "url": "https://leetcode.com/problems/valid-anagram/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 260,
+   "title": "Single Number III",
+   "difficulty": "Medium",
+   "group": "Bit Manipulation",
+   "module": 1,
+   "url": "https://leetcode.com/problems/single-number-iii/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 268,
+   "title": "Missing Number",
+   "difficulty": "Easy",
+   "group": "Cyclic Sort",
+   "module": 2,
+   "url": "https://leetcode.com/problems/missing-number/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 287,
+   "title": "Find the Duplicate Number",
+   "difficulty": "Medium",
+   "group": "Cyclic Sort",
+   "module": 2,
+   "url": "https://leetcode.com/problems/find-the-duplicate-number/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 292,
+   "title": "Nim Game",
+   "difficulty": "Easy",
+   "group": "Game Theory (Nim / Grundy — pure math track)",
+   "module": 1,
+   "url": "https://leetcode.com/problems/nim-game/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 295,
+   "title": "Find Median from Data Stream",
+   "difficulty": "Hard",
+   "group": "Heaps / Priority Queues",
+   "module": 6,
+   "url": "https://leetcode.com/problems/find-median-from-data-stream/",
+   "note": "the two-heap pattern",
+   "also_in_modules": []
+  },
+  {
+   "lc": 297,
+   "title": "Serialize and Deserialize Binary Tree",
+   "difficulty": "Hard",
+   "group": "Binary Trees",
+   "module": 6,
+   "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 300,
+   "title": "Longest Increasing Subsequence",
+   "difficulty": "Medium",
+   "group": "DP (1D)",
+   "module": 8,
+   "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+   "note": "revisit with a Fenwick Tree in Module 10",
+   "also_in_modules": []
+  },
+  {
+   "lc": 303,
+   "title": "Range Sum Query - Immutable",
+   "difficulty": "Easy",
+   "group": "Prefix Sum / Difference Arrays",
+   "module": 2,
+   "url": "https://leetcode.com/problems/range-sum-query-immutable/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 307,
+   "title": "Range Sum Query - Mutable",
+   "difficulty": "Medium",
+   "group": "Segment Trees / Fenwick Trees",
+   "module": 10,
+   "url": "https://leetcode.com/problems/range-sum-query-mutable/",
+   "note": "build this with *both* a Fenwick Tree and a Segment Tree; feel the difference",
+   "also_in_modules": []
+  },
+  {
+   "lc": 312,
+   "title": "Burst Balloons",
+   "difficulty": "Hard",
+   "group": "Interval DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/burst-balloons/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 315,
+   "title": "Count of Smaller Numbers After Self",
+   "difficulty": "Hard",
+   "group": "Segment Trees / Fenwick Trees",
+   "module": 10,
+   "url": "https://leetcode.com/problems/count-of-smaller-numbers-after-self/",
+   "note": "BIT applied to an indirect \"count\" query",
+   "also_in_modules": []
+  },
+  {
+   "lc": 322,
+   "title": "Coin Change",
+   "difficulty": "Medium",
+   "group": "DP (1D)",
+   "module": 8,
+   "url": "https://leetcode.com/problems/coin-change/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 327,
+   "title": "Count of Range Sum",
+   "difficulty": "Hard",
+   "group": "Segment Trees / Fenwick Trees",
+   "module": 10,
+   "url": "https://leetcode.com/problems/count-of-range-sum/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 337,
+   "title": "House Robber III",
+   "difficulty": "Medium",
+   "group": "DP on Trees",
+   "module": 8,
+   "url": "https://leetcode.com/problems/house-robber-iii/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 338,
+   "title": "Counting Bits",
+   "difficulty": "Easy",
+   "group": "Bit Manipulation",
+   "module": 1,
+   "url": "https://leetcode.com/problems/counting-bits/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 347,
+   "title": "Top K Frequent Elements",
+   "difficulty": "Medium",
+   "group": "Hashing",
+   "module": 4,
+   "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+   "note": null,
+   "also_in_modules": [
+    6
+   ]
+  },
+  {
+   "lc": 355,
+   "title": "Design Twitter",
+   "difficulty": "Medium",
+   "group": "General",
+   "module": 11,
+   "url": "https://leetcode.com/problems/design-twitter/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 357,
+   "title": "Count Numbers with Unique Digits",
+   "difficulty": "Medium",
+   "group": "Digit DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/count-numbers-with-unique-digits/",
+   "note": "a gentler on-ramp before the two above",
+   "also_in_modules": []
+  },
+  {
+   "lc": 372,
+   "title": "Super Pow",
+   "difficulty": "Medium",
+   "group": "Modular Arithmetic, Fast Exponentiation & Modular Inverse",
+   "module": 1,
+   "url": "https://leetcode.com/problems/super-pow/",
+   "note": "modular exponentiation with a huge exponent",
+   "also_in_modules": []
+  },
+  {
+   "lc": 380,
+   "title": "Insert Delete GetRandom O(1)",
+   "difficulty": "Medium",
+   "group": "Hashing",
+   "module": 4,
+   "url": "https://leetcode.com/problems/insert-delete-getrandom-o1/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 382,
+   "title": "Linked List Random Node",
+   "difficulty": "Medium",
+   "group": "Probability & Expected Value",
+   "module": 1,
+   "url": "https://leetcode.com/problems/linked-list-random-node/",
+   "note": "reservoir sampling",
+   "also_in_modules": []
+  },
+  {
+   "lc": 398,
+   "title": "Random Pick Index",
+   "difficulty": "Medium",
+   "group": "Probability & Expected Value",
+   "module": 1,
+   "url": "https://leetcode.com/problems/random-pick-index/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 399,
+   "title": "Evaluate Division",
+   "difficulty": "Medium",
+   "group": "Union-Find",
+   "module": 9,
+   "url": "https://leetcode.com/problems/evaluate-division/",
+   "note": "weighted union-find",
+   "also_in_modules": []
+  },
+  {
+   "lc": 416,
+   "title": "Partition Equal Subset Sum",
+   "difficulty": "Medium",
+   "group": "DP (2D) & Knapsack",
+   "module": 8,
+   "url": "https://leetcode.com/problems/partition-equal-subset-sum/",
+   "note": "0/1 knapsack",
+   "also_in_modules": []
+  },
+  {
+   "lc": 417,
+   "title": "Pacific Atlantic Water Flow",
+   "difficulty": "Medium",
+   "group": "Graph Fundamentals",
+   "module": 9,
+   "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 424,
+   "title": "Longest Repeating Character Replacement",
+   "difficulty": "Medium",
+   "group": "Sliding Window",
+   "module": 2,
+   "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 435,
+   "title": "Non-overlapping Intervals",
+   "difficulty": "Medium",
+   "group": "Merge Intervals",
+   "module": 2,
+   "url": "https://leetcode.com/problems/non-overlapping-intervals/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 443,
+   "title": "String Compression",
+   "difficulty": "Medium",
+   "group": "Strings",
+   "module": 2,
+   "url": "https://leetcode.com/problems/string-compression/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 448,
+   "title": "Find All Numbers Disappeared in an Array",
+   "difficulty": "Easy",
+   "group": "Cyclic Sort",
+   "module": 2,
+   "url": "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 459,
+   "title": "Repeated Substring Pattern",
+   "difficulty": "Easy",
+   "group": "KMP",
+   "module": 7,
+   "url": "https://leetcode.com/problems/repeated-substring-pattern/",
+   "note": "the LPS-array trick in disguise",
+   "also_in_modules": []
+  },
+  {
+   "lc": 460,
+   "title": "LFU Cache",
+   "difficulty": "Hard",
+   "group": "General",
+   "module": 11,
+   "url": "https://leetcode.com/problems/lfu-cache/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 470,
+   "title": "Implement Rand10() Using Rand7()",
+   "difficulty": "Medium",
+   "group": "Probability & Expected Value",
+   "module": 1,
+   "url": "https://leetcode.com/problems/implement-rand10-using-rand7/",
+   "note": "rejection sampling",
+   "also_in_modules": []
+  },
+  {
+   "lc": 486,
+   "title": "Predict the Winner",
+   "difficulty": "Medium",
+   "group": "Game Theory + DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/predict-the-winner/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 496,
+   "title": "Next Greater Element I",
+   "difficulty": "Easy",
+   "group": "Monotonic Stack",
+   "module": 3,
+   "url": "https://leetcode.com/problems/next-greater-element-i/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 509,
+   "title": "Fibonacci Number",
+   "difficulty": "Easy",
+   "group": "Matrix Exponentiation",
+   "module": 1,
+   "url": "https://leetcode.com/problems/fibonacci-number/",
+   "note": "do the O(n) DP first, then redo it as matrix power",
+   "also_in_modules": [
+    4
+   ]
+  },
+  {
+   "lc": 516,
+   "title": "Longest Palindromic Subsequence",
+   "difficulty": "Medium",
+   "group": "Interval DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/longest-palindromic-subsequence/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 518,
+   "title": "Coin Change II",
+   "difficulty": "Medium",
+   "group": "DP (2D) & Knapsack",
+   "module": 8,
+   "url": "https://leetcode.com/problems/coin-change-ii/",
+   "note": "unbounded knapsack",
+   "also_in_modules": []
+  },
+  {
+   "lc": 543,
+   "title": "Diameter of Binary Tree",
+   "difficulty": "Easy",
+   "group": "Binary Trees",
+   "module": 6,
+   "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 547,
+   "title": "Number of Provinces",
+   "difficulty": "Medium",
+   "group": "Union-Find",
+   "module": 9,
+   "url": "https://leetcode.com/problems/number-of-provinces/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 560,
+   "title": "Subarray Sum Equals K",
+   "difficulty": "Medium",
+   "group": "Prefix Sum / Difference Arrays",
+   "module": 2,
+   "url": "https://leetcode.com/problems/subarray-sum-equals-k/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 567,
+   "title": "Permutation in String",
+   "difficulty": "Medium",
+   "group": "Sliding Window",
+   "module": 2,
+   "url": "https://leetcode.com/problems/permutation-in-string/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 621,
+   "title": "Task Scheduler",
+   "difficulty": "Medium",
+   "group": "Heaps / Priority Queues",
+   "module": 6,
+   "url": "https://leetcode.com/problems/task-scheduler/",
+   "note": null,
+   "also_in_modules": [
+    8
+   ]
+  },
+  {
+   "lc": 647,
+   "title": "Palindromic Substrings",
+   "difficulty": "Medium",
+   "group": "Manacher's Algorithm",
+   "module": 7,
+   "url": "https://leetcode.com/problems/palindromic-substrings/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 648,
+   "title": "Replace Words",
+   "difficulty": "Medium",
+   "group": "Tries",
+   "module": 7,
+   "url": "https://leetcode.com/problems/replace-words/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 684,
+   "title": "Redundant Connection",
+   "difficulty": "Medium",
+   "group": "Union-Find",
+   "module": 9,
+   "url": "https://leetcode.com/problems/redundant-connection/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 686,
+   "title": "Repeated String Match",
+   "difficulty": "Medium",
+   "group": "KMP",
+   "module": 7,
+   "url": "https://leetcode.com/problems/repeated-string-match/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 698,
+   "title": "Partition to K Equal Sum Subsets",
+   "difficulty": "Medium",
+   "group": "Bitmask DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/partition-to-k-equal-sum-subsets/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 704,
+   "title": "Binary Search",
+   "difficulty": "Easy",
+   "group": "Binary Search",
+   "module": 5,
+   "url": "https://leetcode.com/problems/binary-search/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 706,
+   "title": "Design HashMap",
+   "difficulty": "Easy",
+   "group": "General",
+   "module": 11,
+   "url": "https://leetcode.com/problems/design-hashmap/",
+   "note": "deceptively useful for confirming you actually understand hashing internals",
+   "also_in_modules": []
+  },
+  {
+   "lc": 721,
+   "title": "Accounts Merge",
+   "difficulty": "Medium",
+   "group": "Union-Find",
+   "module": 9,
+   "url": "https://leetcode.com/problems/accounts-merge/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 732,
+   "title": "My Calendar III",
+   "difficulty": "Hard",
+   "group": "Segment Trees / Fenwick Trees",
+   "module": 10,
+   "url": "https://leetcode.com/problems/my-calendar-iii/",
+   "note": "segment tree with lazy propagation on a coordinate-compressed range",
+   "also_in_modules": []
+  },
+  {
+   "lc": 739,
+   "title": "Daily Temperatures",
+   "difficulty": "Medium",
+   "group": "Monotonic Stack",
+   "module": 3,
+   "url": "https://leetcode.com/problems/daily-temperatures/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 743,
+   "title": "Network Delay Time",
+   "difficulty": "Medium",
+   "group": "Shortest Paths",
+   "module": 9,
+   "url": "https://leetcode.com/problems/network-delay-time/",
+   "note": "Dijkstra",
+   "also_in_modules": []
+  },
+  {
+   "lc": 763,
+   "title": "Partition Labels",
+   "difficulty": "Medium",
+   "group": "Greedy",
+   "module": 8,
+   "url": "https://leetcode.com/problems/partition-labels/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 785,
+   "title": "Is Graph Bipartite?",
+   "difficulty": "Medium",
+   "group": "Bipartite / Graph Coloring",
+   "module": 9,
+   "url": "https://leetcode.com/problems/is-graph-bipartite/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 787,
+   "title": "Cheapest Flights Within K Stops",
+   "difficulty": "Medium",
+   "group": "Shortest Paths",
+   "module": 9,
+   "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+   "note": "Bellman-Ford-shaped",
+   "also_in_modules": []
+  },
+  {
+   "lc": 802,
+   "title": "Find Eventual Safe States",
+   "difficulty": "Medium",
+   "group": "Topological Sort",
+   "module": 9,
+   "url": "https://leetcode.com/problems/find-eventual-safe-states/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 847,
+   "title": "Shortest Path Visiting All Nodes",
+   "difficulty": "Hard",
+   "group": "Bitmask DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/shortest-path-visiting-all-nodes/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 875,
+   "title": "Koko Eating Bananas",
+   "difficulty": "Medium",
+   "group": "Binary Search on Answer",
+   "module": 5,
+   "url": "https://leetcode.com/problems/koko-eating-bananas/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 877,
+   "title": "Stone Game",
+   "difficulty": "Medium",
+   "group": "Game Theory + DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/stone-game/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 886,
+   "title": "Possible Bipartition",
+   "difficulty": "Medium",
+   "group": "Bipartite / Graph Coloring",
+   "module": 9,
+   "url": "https://leetcode.com/problems/possible-bipartition/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 895,
+   "title": "Maximum Frequency Stack",
+   "difficulty": "Hard",
+   "group": "General",
+   "module": 11,
+   "url": "https://leetcode.com/problems/maximum-frequency-stack/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 902,
+   "title": "Numbers At Most N Given Digit Set",
+   "difficulty": "Hard",
+   "group": "Digit DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/numbers-at-most-n-given-digit-set/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 912,
+   "title": "Sort an Array",
+   "difficulty": "Medium",
+   "group": "Divide & Conquer",
+   "module": 4,
+   "url": "https://leetcode.com/problems/sort-an-array/",
+   "note": "implement merge sort *and* quicksort by hand here",
+   "also_in_modules": [
+    5
+   ]
+  },
+  {
+   "lc": 918,
+   "title": "Maximum Sum Circular Subarray",
+   "difficulty": "Medium",
+   "group": "Kadane's Algorithm",
+   "module": 2,
+   "url": "https://leetcode.com/problems/maximum-sum-circular-subarray/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 933,
+   "title": "Number of Recent Calls",
+   "difficulty": "Easy",
+   "group": "Queues / Deques",
+   "module": 3,
+   "url": "https://leetcode.com/problems/number-of-recent-calls/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 935,
+   "title": "Knight Dialer",
+   "difficulty": "Medium",
+   "group": "Matrix Exponentiation",
+   "module": 1,
+   "url": "https://leetcode.com/problems/knight-dialer/",
+   "note": "a linear-recurrence-in-disguise problem that genuinely needs matrix exponentiation at scale",
+   "also_in_modules": []
+  },
+  {
+   "lc": 943,
+   "title": "Find the Shortest Superstring",
+   "difficulty": "Hard",
+   "group": "Bitmask DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/find-the-shortest-superstring/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 968,
+   "title": "Binary Tree Cameras",
+   "difficulty": "Hard",
+   "group": "DP on Trees",
+   "module": 8,
+   "url": "https://leetcode.com/problems/binary-tree-cameras/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 994,
+   "title": "Rotting Oranges",
+   "difficulty": "Medium",
+   "group": "Graph Fundamentals",
+   "module": 9,
+   "url": "https://leetcode.com/problems/rotting-oranges/",
+   "note": "multi-source BFS",
+   "also_in_modules": []
+  },
+  {
+   "lc": 1011,
+   "title": "Capacity To Ship Packages Within D Days",
+   "difficulty": "Medium",
+   "group": "Binary Search on Answer",
+   "module": 5,
+   "url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 1025,
+   "title": "Divisor Game",
+   "difficulty": "Easy",
+   "group": "Game Theory (Nim / Grundy — pure math track)",
+   "module": 1,
+   "url": "https://leetcode.com/problems/divisor-game/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 1039,
+   "title": "Minimum Score Triangulation of Polygon",
+   "difficulty": "Medium",
+   "group": "Interval DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/minimum-score-triangulation-of-polygon/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 1044,
+   "title": "Longest Duplicate Substring",
+   "difficulty": "Hard",
+   "group": "Rabin-Karp / Rolling Hash",
+   "module": 7,
+   "url": "https://leetcode.com/problems/longest-duplicate-substring/",
+   "note": "rolling hash + binary search on answer, ties Module 5 back in",
+   "also_in_modules": []
+  },
+  {
+   "lc": 1071,
+   "title": "Greatest Common Divisor of Strings",
+   "difficulty": "Easy",
+   "group": "GCD/LCM & Sieve",
+   "module": 1,
+   "url": "https://leetcode.com/problems/greatest-common-divisor-of-strings/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 1094,
+   "title": "Car Pooling",
+   "difficulty": "Medium",
+   "group": "Prefix Sum / Difference Arrays",
+   "module": 2,
+   "url": "https://leetcode.com/problems/car-pooling/",
+   "note": "difference array",
+   "also_in_modules": []
+  },
+  {
+   "lc": 1140,
+   "title": "Stone Game II",
+   "difficulty": "Medium",
+   "group": "Game Theory + DP",
+   "module": 8,
+   "url": "https://leetcode.com/problems/stone-game-ii/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 1143,
+   "title": "Longest Common Subsequence",
+   "difficulty": "Medium",
+   "group": "DP (2D) & Knapsack",
+   "module": 8,
+   "url": "https://leetcode.com/problems/longest-common-subsequence/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 1192,
+   "title": "Critical Connections in a Network",
+   "difficulty": "Hard",
+   "group": "SCC / Bridges",
+   "module": 9,
+   "url": "https://leetcode.com/problems/critical-connections-in-a-network/",
+   "note": "Tarjan's bridge-finding, the canonical LeetCode representative of this whole topic",
+   "also_in_modules": []
+  },
+  {
+   "lc": 1220,
+   "title": "Count Vowels Permutation",
+   "difficulty": "Hard",
+   "group": "Matrix Exponentiation",
+   "module": 1,
+   "url": "https://leetcode.com/problems/count-vowels-permutation/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 1334,
+   "title": "Find the City With the Smallest Number of Neighbors at a Threshold Distance",
+   "difficulty": "Medium",
+   "group": "Shortest Paths",
+   "module": 9,
+   "url": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
+   "note": "Floyd-Warshall",
+   "also_in_modules": []
+  },
+  {
+   "lc": 1392,
+   "title": "Longest Happy Prefix",
+   "difficulty": "Hard",
+   "group": "Z-Function",
+   "module": 7,
+   "url": "https://leetcode.com/problems/longest-happy-prefix/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 1584,
+   "title": "Min Cost to Connect All Points",
+   "difficulty": "Medium",
+   "group": "Minimum Spanning Trees",
+   "module": 9,
+   "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
+   "note": null,
+   "also_in_modules": []
+  },
+  {
+   "lc": 1922,
+   "title": "Count Good Numbers",
+   "difficulty": "Medium",
+   "group": "Modular Arithmetic, Fast Exponentiation & Modular Inverse",
+   "module": 1,
+   "url": "https://leetcode.com/problems/count-good-numbers/",
+   "note": "fast exponentiation + counting combined",
+   "also_in_modules": []
+  },
+  {
+   "lc": 2427,
+   "title": "Number of Common Factors",
+   "difficulty": "Easy",
+   "group": "GCD/LCM & Sieve",
+   "module": 1,
+   "url": "https://leetcode.com/problems/number-of-common-factors/",
+   "note": null,
+   "also_in_modules": []
+  }
+ ]
+}
